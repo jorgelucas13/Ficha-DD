@@ -1,3 +1,8 @@
+
+
+
+
+
 // DARK MODE
 const toggle = document.getElementById('darkModeToggle');
 const body = document.body;
@@ -20,149 +25,7 @@ window.addEventListener('load', () => {
   }
 });
 
-
-
-// FUNÇÃO DO NOME DO PERSONAGEM
-const nomeInput = document.getElementById("nome");
-const nomePersonagemBtn = document.getElementById("nomePersonagemBtn");
-
-// Função para atualizar o botão com o nome do personagem
-function atualizarBotaoNome() {
-  const nome = nomeInput.value.trim();
-  nomePersonagemBtn.textContent = nome !== "" ? nome : "Personagem";
-}
-
-// Atualiza enquanto o usuário digita
-nomeInput.addEventListener("input", atualizarBotaoNome);
-
-// Atualiza também ao carregar dados salvos do banco (chame isso após carregar)
-window.addEventListener("DOMContentLoaded", atualizarBotaoNome);
-
-atualizarBotaoNome(); // <-- garante que o nome apareça no botão
-// FIM DO NOME
-
-// CRIAR NOVA FICHA
-document.getElementById("criarFichaBtn").addEventListener("click", async () => {
-  const user = window.auth.currentUser;
-  if (!user) return;
-
-  const novaFicha = {}; // Campos iniciais vazios
-
-  // Cria nova ficha e obtém referência
-  const fichaRef = await addDoc( 
-    collection(window.db, "fichas", user.uid, "fichas"),
-    novaFicha
-  );
-
-  window.fichaAtualId = fichaRef.id;
-
-  // Limpa os campos da interface
-  document.querySelectorAll("input, textarea, select").forEach(campo => {
-    if (!campo.id || campo.type === "file") return;
-
-    if (campo.type === "checkbox") {
-      campo.checked = false;
-    } else if (campo.tagName === "SELECT" && campo.multiple) {
-      Array.from(campo.options).forEach(opt => (opt.selected = false));
-    } else {
-      campo.value = "";
-    }
-  });
-
-  // Salva ficha vazia no banco
-  await salvarFicha();
-
-  // Atualiza nome do botão se necessário
-  const nomeBtn = document.getElementById("nomePersonagemBtn");
-  if (nomeBtn) nomeBtn.textContent = "Personagem";
-
-  await restaurarFicha(); // (opcional)
-});
-
-
-// SALVAMENTO DOS DADOS
-async function salvarFicha() {
-  const user = window.auth.currentUser;
-  const fichaId = window.fichaAtualId;
-  if (!user || !fichaId) return;
-
-  const campos = document.querySelectorAll("input, textarea, select");
-  const dados = {};
-
-  campos.forEach(campo => {
-    const id = campo.id;
-    if (!id || campo.type === "file") return;
-
-    if (campo.type === "checkbox") {
-      dados[id] = campo.checked;
-    } else if (campo.tagName === "SELECT" && campo.multiple) {
-      dados[id] = Array.from(campo.selectedOptions).map(opt => opt.value);
-    } else {
-      dados[id] = campo.value;
-    }
-  });
-
-  const fichaRef = doc(window.db, "fichas", user.uid, "fichas", fichaId);
-  await setDoc(fichaRef, dados, { merge: true });
-}
-
-async function restaurarFicha() {
-  const user = window.auth.currentUser;
-  const fichaId = window.fichaAtualId;
-  if (!user || !fichaId) return;
-
-  const fichaRef = doc(window.db, "fichas", user.uid, "fichas", fichaId);
-  const snapshot = await getDoc(fichaRef);
-  if (!snapshot.exists()) return;
-
-  const dados = snapshot.data();
-  document.getElementById("nome").value = dados.nome || "";
-  const campos = document.querySelectorAll("input, textarea, select");
-
-  campos.forEach(campo => {
-    const id = campo.id;
-    if (!id || campo.type === "file") return;
-
-    const valor = dados[id];
-    if (valor === undefined) return;
-
-    if (campo.type === "checkbox") {
-      campo.checked = valor === true;
-    } else if (campo.tagName === "SELECT" && campo.multiple && Array.isArray(valor)) {
-      Array.from(campo.options).forEach(opt => {
-        opt.selected = valor.includes(opt.value);
-      });
-    } else {
-      campo.value = valor;
-    }
-  });
-}
-
-window.addEventListener("DOMContentLoaded", async () => {
-  // Espera até que auth esteja pronto
-  const esperarUsuario = () => {
-    return new Promise(resolve => {
-      const intervalo = setInterval(() => {
-        if (window.auth.currentUser && window.fichaAtualId) {
-          clearInterval(intervalo);
-          resolve();
-        }
-      }, 100);
-    });
-  };
-
-  await esperarUsuario();
-  await restaurarFicha();
-
-  document.querySelectorAll("input, textarea, select").forEach(campo => {
-    campo.addEventListener("input", salvarFicha);
-    campo.addEventListener("change", salvarFicha);
-  });
-});
-// FIM DO SALVAR A IMAGEM
-
-
-
+// CODIGO DRAG AND DROP
 const columns = document.querySelectorAll(".coluna-cards");
 let draggedCard = null;
 
@@ -222,14 +85,17 @@ const drop = (event) => {
     }
 
     if (!inserted) {
-        // Se não inseriu antes de algum card, insere antes do botão (para nunca ficar depois do botão)
         if (button) {
             column.insertBefore(draggedCard, button);
         } else {
             column.appendChild(draggedCard);
         }
     }
+
+    // Salvar o estado dos cards após o drop
+    salvarCards();
 };
+
 
 // Criar novo card ao dar duplo clique
 const createcard = ({ target }) => {

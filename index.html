@@ -6,23 +6,51 @@
     <title>Ficha Dungeons and Dragons</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="icons8-dungeons-and-dragons-96.png" type="image/png">
+    <link rel="icon" href="assets/icons8-dungeons-and-dragons-96.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
     <div class="wrapper">
+        <header class="menu-header">
+  <div class="menu-container">
+    <div class="site-title">FICHA DE DUNGEONS AND DRAGONS 2024</div>
+
+    <div class="menu-actions">
+        <div class="dark-mode-wrapper">
+  <svg class="dark-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <g> <path d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20 L12,4 C16.418278,4 20,7.581722 20,12 C20,16.418278 16.418278,20 12,20 Z"> </path> </g> </svg>
+
+  <label class="switch">
+    <input type="checkbox" id="darkModeToggle" />
+    <span class="slider"></span>
+  </label>
+    </div>
+
+      <!-- Menu Dropdown puro CSS -->
+      <div class="dropdown">
+        <input type="checkbox" id="toggle-submenu" class="toggle-submenu" />
+        <label for="toggle-submenu" class="dropdown-button" id="nomePersonagemBtn">Personagem</label>
+                <div class="submenu">
+          <!-- Botão para criar nova ficha -->
+          <button id="criarFichaBtn">Criar nova ficha</button>
+          <button id="logoutBtn">Sair</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
     <section class="background">
         <div class="header">
             <div class="container01">
             <div class="nome-container">
                 <h3>NOME DO PERSONAGEM</h3>
-                <input type="text" name="nome" class="caixa-texto">
+                <input type="text" name="nome" class="caixa-texto" id="nome">
             </div>
-                <div class="antecede-container"><h3>ANTECEDENTE</h3><input type="text" name="antecedente" class="caixa-texto"></div>
-                <div class="classe-container"><h3>CLASSE</h3><input type="text" name="classe" class="caixa-texto"></div>
-                <div class="especie-container"><h3>ESPÉCIE</h3><input type="text" name="especie" class="caixa-texto"></div>
-                <div class="subclasse-container"><h3>SUBCLASSE</h3><input type="text" name="subclasse" class="caixa-texto"></div>
+                <div class="antecede-container"><h3>ANTECEDENTE</h3><input type="text" name="antecedente" class="caixa-texto" id="antecedente"></div>
+                <div class="classe-container"><h3>CLASSE</h3><input type="text" name="classe" class="caixa-texto" id="classe"></div>
+                <div class="especie-container"><h3>ESPÉCIE</h3><input type="text" name="especie" class="caixa-texto" id="especie"></div>
+                <div class="subclasse-container"><h3>SUBCLASSE</h3><input type="text" name="subclasse" class="caixa-texto" id="subclass"></div>
             </div>
             <div class="container02">
                 <div class="nivel-container"><input type="text" name="nivel" class="caixa-texto texto-center" id="nv-texto"><h3>NÍVEL</h3>
@@ -313,38 +341,38 @@
         
                             <div class="armas-caixas" id="armas-caixa-nome">
                                 <h3>Nome</h3><input type="text" name="nome-arma" class="caixa-texto" id="armas-1">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-1">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-1">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-1">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-1">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-1">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-1a">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-1b">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-1c">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-1d">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-1e">
                             </div>
 
                             <div class="armas-caixas">
                                 <h3>Bônus Atq/CD</h3><input type="text" name="nome-arma" class="caixa-texto" id="armas-2">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-2">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-2">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-2">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-2">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-2">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-2a">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-2b">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-2c">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-2d">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-2e">
                             </div>
 
                             <div class="armas-caixas">
                                 <h3>Dano e Tipo</h3><input type="text" name="nome-arma" class="caixa-texto" id="armas-3">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-3">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-3">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-3">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-3">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-3">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-3a">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-3b">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-3c">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-3d">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-3e">
                             </div>
 
                             <div class="armas-caixas">
                                 <h3>Notas</h3><input type="text" name="nome-arma" class="caixa-texto" id="armas-4">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-4">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-4">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-4">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-4">
-                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-4">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-4a">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-4b">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-4c">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-4d">
+                                <input type="text" name="nome-arma" class="caixa-texto" id="armas-4e">
                             </div>
                     </div>
                 </div>
@@ -355,20 +383,20 @@
                     <div class="alinhamento-container">
 
                         <div class="conteudo-skills">
-                            <div class="coluna-cards">
+                            <div class="coluna-cards" id="coluna1">
                                 <div class="card">
                                     <div class="drag-handle" draggable="true" title="Arraste para mover"></div>
-                                    <div class="card-content" contenteditable="true"></div>
+                                    <div class="card-content" contenteditable="true" id="skills"></div>
                                 </div>
                                 <button class="add-card-btn">+ Nova Habilidade</button>
                             </div>
                         </div>
 
                         <div class="conteudo-skills">
-                            <div class="coluna-cards">
+                            <div class="coluna-cards" id="coluna2">
                                 <div class="card">
                                     <div class="drag-handle" draggable="true" title="Arraste para mover"></div>
-                                    <div class="card-content" contenteditable="true"></div>
+                                    <div class="card-content" contenteditable="true" id="skills2"></div>
                                 </div>
                                 <button class="add-card-btn">+ Nova Habilidade</button>
                             </div>
@@ -462,45 +490,45 @@
                                                 <!-- 1ª Coluna -->
                                                 <div class="coluna">
                                                     <div class="cabecalho"><span>Total</span><span>Gastos</span></div>
-                                                    <div class="linha"><label>1º Circ.</label><input type="text" class="caixa-texto box"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
-                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
-                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
-                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
+                                                    <div class="linha"><label>1º Circ.</label><input type="text" class="caixa-texto box" id="mg-1circ"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check1a"/><div class="checkbox-mg"></div></label></div>
+                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check1b"/><div class="checkbox-mg"></div></label></div>
+                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check1c"/><div class="checkbox-mg"></div></label></div>
+                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check1d"/><div class="checkbox-mg"></div></label></div>
                                                 </div>
-                                                    <div class="linha"><label>2º Circ.</label><input type="text" class="caixa-texto box"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
-                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
-                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
+                                                    <div class="linha"><label>2º Circ.</label><input type="text" class="caixa-texto box" id="mg-2circ"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check2a"/><div class="checkbox-mg"></div></label></div>
+                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check2b"/><div class="checkbox-mg"></div></label></div>
+                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check2c"/><div class="checkbox-mg"></div></label></div>
                                                 </div>
-                                                    <div class="linha"><label>3º Circ.</label><input type="text" class="caixa-texto box"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
-                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
-                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
+                                                    <div class="linha"><label>3º Circ.</label><input type="text" class="caixa-texto box" id="mg-3circ"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check3a"/><div class="checkbox-mg"></div></label></div>
+                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check3b"/><div class="checkbox-mg"></div></label></div>
+                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check3c"/><div class="checkbox-mg"></div></label></div>
                                                 </div>
                                                 </div>
 
                                                     <!-- 2ª Coluna -->
                                                 <div class="coluna">
                                                     <div class="cabecalho" id="cabecalho2"><span>Total</span><span>Gastos</span></div>
-                                                    <div class="linha"><label>4º Circ.</label><input type="text" class="caixa-texto box"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
-                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
-                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
+                                                    <div class="linha"><label>4º Circ.</label><input type="text" class="caixa-texto box" id="mg-4circ"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check4a"/><div class="checkbox-mg"></div></label></div>
+                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check4b"/><div class="checkbox-mg"></div></label></div>
+                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check4c"/><div class="checkbox-mg"></div></label></div>
                                                 </div>
-                                                    <div class="linha"><label>5º Circ.</label><input type="text" class="caixa-texto box"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
-                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
-                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
+                                                    <div class="linha"><label>5º Circ.</label><input type="text" class="caixa-texto box" id="mg-5circ"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check5a"/><div class="checkbox-mg"></div></label></div>
+                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check5b"/><div class="checkbox-mg"></div></label></div>
+                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check5c"/><div class="checkbox-mg"></div></label></div>
                                                 </div>
-                                                    <div class="linha"><label>6º Circ.</label><input type="text" class="caixa-texto box"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
-                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
+                                                    <div class="linha"><label>6º Circ.</label><input type="text" class="caixa-texto box" id="mg-circ"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check6a"/><div class="checkbox-mg"></div></label></div>
+                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check6b"/><div class="checkbox-mg"></div></label></div>
                                                 </div>
                                                 </div>
 
                                                 <!-- 3ª Coluna -->
                                                 <div class="coluna">
                                                     <div class="cabecalho" id="cabecalho3"><span>Total</span><span>Gastos</span></div>
-                                                    <div class="linha"><label>7º Circ.</label><input type="text" class="caixa-texto box"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
-                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
+                                                    <div class="linha"><label>7º Circ.</label><input type="text" class="caixa-texto box"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check7a"/><div class="checkbox-mg"></div></label></div>
+                                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check7b"/><div class="checkbox-mg"></div></label></div>
                                                 </div>
-                                                    <div class="linha"><label>8º Circ.</label><input type="text" class="caixa-texto box"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div></div>
-                                                    <div class="linha"><label>9º Circ.</label><input type="text" class="caixa-texto box"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div></div>
+                                                    <div class="linha"><label>8º Circ.</label><input type="text" class="caixa-texto box"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check8a"/><div class="checkbox-mg"></div></label></div></div>
+                                                    <div class="linha"><label>9º Circ.</label><input type="text" class="caixa-texto box"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="mg-check9a"/><div class="checkbox-mg"></div></label></div></div>
                                                 </div>
                                             </div>
                                     </div>
@@ -517,244 +545,361 @@
                                 <div class="item"><h3>Círculo</h3></div><div class="item"><h3>Nome</h3></div><div class="item"><h3>Tempo de conjuração</h3></div><div class="item"><h3>Alcance</h3></div><div class="item"><h3>Concentração, Ritual & Material Requerido</h3></div><div class="item"><h3>Notas</h3></div>
                                 
                                 <!-- linha 1 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto caixa-larga"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto caixa-larga"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li1-text1"></div>
+                                    <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li1-text2"></div>
+                                    <div class="item"><input type="text" class="caixa-texto" id="li1-text3"></div>
+                                    <div class="item"><input type="text" class="caixa-texto" id="li1-text4"></div>
+                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li1-cx1"/><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li1-cx2"/><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li1-cx3"/><div class="checkbox-mg"></div></label>M</div></div>
+                                    <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li1-text5"></div>
 
                                 <!-- linha 2 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li2-text1"></div>
+                                    <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li2-text2"></div>
+                                    <div class="item"><input type="text" class="caixa-texto" id="li2-text3"></div>
+                                    <div class="item"><input type="text" class="caixa-texto" id="li2-text4"></div>
+                                    <div class="item-checks">
+                                    <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li2-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                    <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li2-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                    <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li2-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                    </div>
+                                    <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li2-text5"></div>
 
                                 <!-- linha 3 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li3-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li3-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li3-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li3-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li3-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li3-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li3-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li3-text5"></div>
 
                                 <!-- linha 4 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li4-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li4-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li4-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li4-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li4-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li4-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li4-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li4-text5"></div>
 
                                 <!-- linha 5 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li5-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li5-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li5-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li5-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li5-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li5-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li5-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li5-text5"></div>
 
                                 <!-- linha 6 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li6-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li6-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li6-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li6-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li6-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li6-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li6-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li6-text5"></div>
 
                                 <!-- linha 7 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li7-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li7-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li7-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li7-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li7-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li7-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li7-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li7-text5"></div>
 
                                 <!-- linha 8 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li8-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li8-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li8-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li8-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li8-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li8-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li8-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li8-text5"></div>
 
                                 <!-- linha 9 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li9-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li9-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li9-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li9-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li9-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li9-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li9-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li9-text5"></div>
 
                                 <!-- linha 10 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li10-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li10-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li10-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li10-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li10-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li10-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li10-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li10-text5"></div>
 
                                 <!-- linha 11 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li11-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li11-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li11-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li11-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li11-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li11-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li11-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li11-text5"></div>
 
                                 <!-- linha 12 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li12-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li12-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li12-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li12-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li12-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li12-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li12-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li12-text5"></div>
 
                                 <!-- linha 13 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li13-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li13-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li13-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li13-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li13-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li13-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li13-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li13-text5"></div>
 
                                 <!-- linha 14 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li14-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li14-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li14-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li14-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li14-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li14-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li14-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li14-text5"></div>
 
                                 <!-- linha 15 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li15-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li15-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li15-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li15-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li15-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li15-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li15-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li15-text5"></div>
 
                                 <!-- linha 16 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li16-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li16-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li16-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li16-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li16-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li16-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li16-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li16-text5"></div>
 
                                 <!-- linha 17 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li17-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li17-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li17-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li17-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li17-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li17-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li17-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li17-text5"></div>
 
                                 <!-- linha 18 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li18-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li18-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li18-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li18-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li18-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li18-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li18-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li18-text5"></div>
 
                                 <!-- linha 19 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li19-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li19-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li19-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li19-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li19-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li19-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li19-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li19-text5"></div>
 
                                 <!-- linha 20 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li20-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li20-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li20-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li20-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li20-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li20-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li20-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li20-text5"></div>
 
                                 <!-- linha 21 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li21-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li21-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li21-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li21-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li21-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li21-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li21-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li21-text5"></div>
 
                                 <!-- linha 22 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li22-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li22-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li22-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li22-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li22-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li22-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li22-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li22-text5"></div>
 
                                 <!-- linha 23 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li23-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li23-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li23-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li23-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li23-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li23-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li23-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li23-text5"></div>
 
                                 <!-- linha 24 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li24-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li24-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li24-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li24-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li24-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li24-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li24-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li24-text5"></div>
 
                                 <!-- linha 25 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li25-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li25-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li25-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li25-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li25-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li25-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li25-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li25-text5"></div>
 
                                 <!-- linha 26 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li26-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li26-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li26-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li26-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li26-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li26-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li26-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li26-text5"></div>
 
                                 <!-- linha 27 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li27-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li27-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li27-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li27-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li27-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li27-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li27-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li27-text5"></div>
 
                                 <!-- linha 28 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li28-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li28-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li28-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li28-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li28-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li28-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li28-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li28-text5"></div>
 
                                 <!-- linha 29 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li29-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li29-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li29-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li29-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li29-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li29-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li29-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li29-text5"></div>
 
                                 <!-- linha 30 -->
-                                <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
-                                    <div class="item-checks"><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>C</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>R</div><div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label>M</div></div>
-                                    <div class="item"><input type="text" class="caixa-texto"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li30-text1"></div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li30-text2"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li30-text3"></div>
+                                <div class="item"><input type="text" class="caixa-texto" id="li30-text4"></div>
+                                <div class="item-checks">
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li30-cx1"/><div class="checkbox-mg"></div></label>C</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li30-cx2"/><div class="checkbox-mg"></div></label>R</div>
+                                <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="li30-cx3"/><div class="checkbox-mg"></div></label>M</div>
+                                </div>
+                                <div class="item"><input type="text" class="caixa-texto caixa-larga" id="li30-text5"></div>
+
                                     
                             </section>
 
@@ -828,16 +973,16 @@
                             <div class="itens-magicos-container">
                                 <h3>Itens Mágicos Sintonizados</h3>
                                 <div class="i-m-content">
-                                    <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
-                                    <input type="text" class="caixa-texto">
+                                    <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="iten-magico-1-check"/><div class="checkbox-mg"></div></label></div>
+                                    <input type="text" class="caixa-texto" id="iten-magico-1">
                                 </div>
                                 <div class="i-m-content">
-                                    <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
-                                    <input type="text" class="caixa-texto">
+                                    <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="iten-magico-2-check"/><div class="checkbox-mg"></div></label></div>
+                                    <input type="text" class="caixa-texto" id="iten-magico-2">
                                 </div>
                                 <div class="i-m-content">
-                                    <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" /><div class="checkbox-mg"></div></label></div>
-                                    <input type="text" class="caixa-texto">
+                                    <div class="quadrados-checks"><label class="check-container-mg"><input type="checkbox" id="iten-magico-3-check"/><div class="checkbox-mg"></div></label></div>
+                                    <input type="text" class="caixa-texto" id="iten-magico-3">
                                 </div>
                             </div>
                         </div>
@@ -851,11 +996,11 @@
                                 <h3>PE</h3>
                                 <h3>PO</h3>
                                 <h3>PL</h3>
-                                <div class="moeda-container"><input type="text" name="moedas" class="caixa-texto custom-form"></div>
-                                <div class="moeda-container"><input type="text" name="moedas" class="caixa-texto custom-form"></div>
-                                <div class="moeda-container"><input type="text" name="moedas" class="caixa-texto custom-form"></div>
-                                <div class="moeda-container"><input type="text" name="moedas" class="caixa-texto custom-form"></div>
-                                <div class="moeda-container"><input type="text" name="moedas" class="caixa-texto custom-form"></div>
+                                <div class="moeda-container"><input type="text" name="moedas" class="caixa-texto custom-form" id="moeda-pc"></div>
+                                <div class="moeda-container"><input type="text" name="moedas" class="caixa-texto custom-form" id="moeda-pp"></div>
+                                <div class="moeda-container"><input type="text" name="moedas" class="caixa-texto custom-form" id="moeda-pe"></div>
+                                <div class="moeda-container"><input type="text" name="moedas" class="caixa-texto custom-form" id="moeda-po"></div>
+                                <div class="moeda-container"><input type="text" name="moedas" class="caixa-texto custom-form" id="moeda-pl"></div>
                             </div>
                         </div>
                     </div>
@@ -864,6 +1009,65 @@
     </section>
     </div>
 
-<script src="script.js"></script>
+<script src="assets/script.js"></script>
+
+<script type="module">
+  // ✅ IMPORTS organizados
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+  import {
+    getFirestore,
+    collection,
+    doc,
+    addDoc,
+    getDocs,
+    getDoc,
+    setDoc,
+    deleteDoc
+  } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+  // ✅ CONFIGURAÇÃO DO FIREBASE
+  const firebaseConfig = {
+    apiKey: "AIzaSyDbCy8oGS55HzdaKrx6CiYzFJ2Lj4uKECw",
+    authDomain: "ficharpg-71f97.firebaseapp.com",
+    projectId: "ficharpg-71f97",
+    storageBucket: "ficharpg-71f97.appspot.com",
+    messagingSenderId: "12738790723",
+    appId: "1:12738790723:web:35d2799b24db5800821bf6",
+    measurementId: "G-Z8K4PFDFJ2"
+  };
+
+  // ✅ INICIALIZA O FIREBASE
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  // ✅ DEIXA DISPONÍVEL GLOBALMENTE PARA script.js
+  window.auth = auth;
+  window.db = db;
+  window.fichaAtualId = null;
+
+  // ✅ VERIFICA LOGIN
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      window.location.href = "login.html";
+    } else {
+      console.log("Usuário logado:", user.email);
+    }
+  });
+
+  // ✅ BOTÃO DE LOGOUT
+  const logoutBtn = document.getElementById("logoutBtn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      signOut(auth).then(() => {
+        window.location.href = "login.html";
+      });
+    });
+  }
+</script>
+
+<script type="module" src="assets/firebase-bd.js"></script>
+
 </body>
 </html>

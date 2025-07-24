@@ -1,0 +1,335 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - Ficha RPG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Oswald", sans-serif;
+        }
+        :root {
+            --cor-texto: #46465f;
+        }
+        body {
+            min-height: 100vh;
+            background: #e0e5ec;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            padding: 40px;
+            background: #e0e5ec;
+            border-radius: 20px;
+            box-shadow: 
+                10px 10px 20px #b8bec5,
+                -10px -10px 20px #ffffff;
+        }
+
+        .login-form {
+            width: 320px;
+        }
+
+        h3 {
+            color: var(--cor-texto);
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            outline: none;
+            background: #e0e5ec;
+            border-radius: 12px;
+            box-shadow: 
+                inset 5px 5px 10px #b8bec5,
+                inset -5px -5px 10px #ffffff;
+            font-size: 16px;
+            color: var(--cor-texto);
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            box-shadow: 
+                inset 2px 2px 5px #b8bec5,
+                inset -2px -2px 5px #ffffff;
+        }
+
+        .input-group label {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        input:focus ~ label,
+        input:valid ~ label {
+            top: -10px;
+            left: 5px;
+            font-size: 14px;
+            color: var(--cor-texto);
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 25px 0;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            color: #666;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .remember input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+            cursor: pointer;
+            box-shadow: 
+                2px 2px 5px #b8bec5,
+                -2px -2px 5px #ffffff;
+        }
+
+        .remember span {
+            font-size: 14px;
+        }
+
+        .toggle-password {
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        width: 0px;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        font-size: 24px;
+        opacity: 0.4;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+        padding: 0;
+        }
+        .forgot {
+            color: var(--cor-texto);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 12px;
+            background: #e0e5ec;
+            color: var(--cor-texto);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 
+                5px 5px 10px #b8bec5,
+                -5px -5px 10px #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            box-shadow: 
+                2px 2px 5px #b8bec5,
+                -2px -2px 5px #ffffff;
+        }
+
+        button:active {
+            box-shadow: 
+                inset 2px 2px 5px #b8bec5,
+                inset -2px -2px 5px #ffffff;
+        }
+        .texto{
+            font-size: 18px;
+            margin: 15px 0;
+        }
+        .register {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        @media (max-width: 380px) {
+            .login-form {
+                width: 280px;
+            }
+            
+            .options {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <form class="login-form">
+        <h3>Login - Ficha RPG</h3>
+
+    <div class="input-group" id="login-form">
+        <input type="email" required id="email"><br>
+        <label>Email</label>
+    </div>
+
+    <div id="user-info" style="display:none;">
+    Logado como: <span id="user-email"></span>
+    </div>
+
+    <div class="input-group" style="position: relative;">
+  <input type="password" required id="password">
+  <button type="button" id="togglePassword" class="toggle-password" aria-label="Mostrar senha">👁</button>
+  <label for="password">Senha</label>
+</div>
+
+    <div class="options">
+                <label class="remember">
+                    <input type="checkbox">
+                    <span>Lembre-me</span>
+                </label>
+                <a href="#" class="forgot">Esqueceu a senha?</a>
+    </div>
+
+    <button type="submit" id="loginBtn">Entrar</button>
+    <div class="register">
+                <button id="registerBtn">Cadastrar</button>
+    </div>
+    </form>
+    
+    <h3 class="texto">Ou entre com Google</h3>
+    <button id="googleLoginBtn">Entrar com Google</button>
+  </div>
+
+  <!-- Firebase + JS de login -->
+  <script type="module">
+    // Importações do Firebase via CDN
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+    import { browserLocalPersistence, browserSessionPersistence, setPersistence } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+    // Configuração do seu projeto Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyDbCy8oGS55HzdaKrx6CiYzFJ2Lj4uKECw",
+      authDomain: "ficharpg-71f97.firebaseapp.com",
+      projectId: "ficharpg-71f97",
+      storageBucket: "ficharpg-71f97.firebasestorage.app",
+      messagingSenderId: "12738790723",
+      appId: "1:12738790723:web:35d2799b24db5800821bf6",
+      measurementId: "G-Z8K4PFDFJ2"
+    };
+
+    // Inicializa o Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+
+    // Elementos da interface
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const loginBtn = document.getElementById('loginBtn');
+    const registerBtn = document.getElementById('registerBtn');
+    const googleLoginBtn = document.getElementById('googleLoginBtn');
+    const userInfo = document.getElementById('user-info');
+    const userEmail = document.getElementById('user-email');
+    const loginForm = document.getElementById('login-form');
+    const rememberCheckbox = document.querySelector('.remember input');
+
+    // Login com e-mail e senha
+    loginBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const email = emailInput.value;
+  const password = passwordInput.value;
+
+  const persistence = rememberCheckbox.checked
+    ? browserLocalPersistence // mantém mesmo após fechar o navegador
+    : browserSessionPersistence; // só enquanto o navegador estiver aberto
+
+  setPersistence(auth, persistence)
+    .then(() => {
+      return signInWithEmailAndPassword(auth, email, password);
+    })
+    .then(userCredential => {
+      console.log("Login OK:", userCredential.user);
+    })
+    .catch(error => {
+      alert("Erro ao entrar: " + error.message);
+    });
+});
+
+registerBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const email = emailInput.value;
+  const password = passwordInput.value;
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then(userCredential => {
+      alert("Usuário criado com sucesso!");
+    })
+    .catch(error => {
+      alert("Erro ao cadastrar: " + error.message);
+    });
+});
+
+    // Login com Google
+    googleLoginBtn.addEventListener('click', () => {
+      signInWithPopup(auth, provider)
+        .then(result => {
+          console.log("Login com Google OK:", result.user);
+        })
+        .catch(error => {
+          alert("Erro no login com Google: " + error.message);
+        });
+    });
+
+    // Verifica se está logado
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        userInfo.style.display = 'block';
+        userEmail.textContent = user.email;
+        loginForm.style.display = 'none';
+
+        // Redireciona para a ficha
+        window.location.href = "index.html";
+      } else {
+        userInfo.style.display = 'none';
+        loginForm.style.display = 'block';
+      }
+    });
+
+  const togglePassword = document.getElementById('togglePassword');
+const passwordField = document.getElementById('password');
+
+togglePassword.addEventListener('click', () => {
+  const isVisible = passwordField.type === 'text';
+  passwordField.type = isVisible ? 'password' : 'text';
+  togglePassword.style.opacity = isVisible ? '0.4' : '1';
+});
+  </script>
+</body>
+</html>
