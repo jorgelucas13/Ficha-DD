@@ -252,13 +252,21 @@ async function carregarFicha(id) {
 
     // Campos comuns e selects
     for (const campoId in data.dados) {
-      const campo = document.getElementById(campoId);
-      if (!campo) continue;
-      if (campo.hasAttribute("contenteditable")) campo.innerHTML = data.dados[campoId];
-      else if (campo.type === "checkbox") campo.checked = data.dados[campoId];
-      else if (campo.tagName === "SELECT") campo.value = data.dados[campoId];
-      else campo.value = data.dados[campoId];
-    }
+  const campo = document.getElementById(campoId);
+  if (!campo) continue;
+
+  if (campo.type === "file") continue; // <-- Pula input do tipo file!
+
+  if (campo.hasAttribute("contenteditable")) {
+    campo.innerHTML = data.dados[campoId];
+  } else if (campo.type === "checkbox") {
+    campo.checked = data.dados[campoId];
+  } else if (campo.tagName === "SELECT") {
+    campo.value = data.dados[campoId];
+  } else {
+    campo.value = data.dados[campoId];
+  }
+}
 
     // Atualiza nome do personagem
     atualizarNomePersonagem(data.nome);
