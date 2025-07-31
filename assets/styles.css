@@ -1071,6 +1071,9 @@ body{
   width: 60px;
   text-align: center;
 }
+#armas-2a, #armas-2b, #armas-2c, #armas-2d, #armas-2e{
+  text-align: center;
+}
 #armas-3{
   width: 120px;
 }
@@ -1651,4 +1654,14 @@ input:checked + .checkmark-prof::after {
 }
 .moedas{
   height: 150px;
+}
+
+.uploadarea{
+  margin-top: 20px;
+  cursor:pointer;
+  padding:8px;
+  color: var(--cor-texto);
+  background:#eeeeee00;
+  border-radius:4px;
+  border: 1px solid var(--cor-texto);
 }

@@ -307,6 +307,88 @@ document.addEventListener('DOMContentLoaded', function () {
     localStorage.removeItem('imagemPerfil');
   });
   // FIM DO SALVAR A IMAGEM --------------------------------------------------------
+  
+const imagensArea = document.getElementById('imagensArea');
+const addImageBtn = document.getElementById('addImageBtn');
+
+function salvarImagensNoLocalStorage(imgs) {
+  localStorage.setItem('imagensUpload', JSON.stringify(imgs));
+}
+
+function carregarImagensDoLocalStorage() {
+  const imgs = JSON.parse(localStorage.getItem('imagensUpload') || '[]');
+  imagensArea.innerHTML = '';
+  imgs.forEach((src, idx) => {
+    criarImagem(src, idx, imgs);
+  });
+  // Sempre deixa o botão embaixo
+  containerUpload.appendChild(addImageBtn);
+}
+
+// Cria a imagem na tela com botão remover
+function criarImagem(src, idx, imgs) {
+  const wrapper = document.createElement('div');
+  wrapper.style.position = 'relative';
+  wrapper.style.display = 'inline-block';
+  wrapper.style.margin = '8px 8px 0 0';
+
+  const img = document.createElement('img');
+  img.src = src;
+  img.style.maxWidth = '100%';
+  img.style.height = 'auto';
+  img.style.display = 'block';
+
+  const removeBtn = document.createElement('button');
+  removeBtn.textContent = 'X';
+  removeBtn.style.position = 'absolute';
+  removeBtn.style.top = '8px';
+  removeBtn.style.right = '8px';
+  removeBtn.style.background = '#9898986f';
+  removeBtn.style.border = 'none';
+  removeBtn.style.borderRadius = '10px';
+  removeBtn.style.cursor = 'pointer';
+  removeBtn.style.width = '20px';
+
+  removeBtn.addEventListener('click', () => {
+    imgs.splice(idx, 1);
+    salvarImagensNoLocalStorage(imgs);
+    carregarImagensDoLocalStorage();
+  });
+
+  wrapper.appendChild(img);
+  wrapper.appendChild(removeBtn);
+
+  imagensArea.appendChild(wrapper);
+}
+
+// Adicionar nova imagem
+addImageBtn.addEventListener('click', () => {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = 'image/*';
+  input.style.display = 'none';
+
+  input.addEventListener('change', () => {
+    const file = input.files[0];
+    if (file && file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const imgs = JSON.parse(localStorage.getItem('imagensUpload') || '[]');
+        imgs.push(e.target.result);
+        salvarImagensNoLocalStorage(imgs);
+        carregarImagensDoLocalStorage();
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  // Chama o input
+  input.click();
+});
+
+// Inicializa imagens ao carregar
+window.addEventListener('DOMContentLoaded', carregarImagensDoLocalStorage);
+    // fim do imagem --------------------------------------------------------
 
 
 // COMEÇO DO SCRIPT BACKEND DA FICHA
